@@ -1,16 +1,7 @@
 # Throw this in a .bashrc or .bash_profile
 
-###################
-# lolcat aliasing #
-###################
-
-alias ls="ls | lolcat"
-alias gs="git status | lolcat"
-alias pwd="pwd | lolcat"
-alias branch="git branch | grep \* | lolcat"
-
 #######################
-# Git branch coolness #
+# Git branch Terminal #
 #######################
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
