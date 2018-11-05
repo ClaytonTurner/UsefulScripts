@@ -1,5 +1,8 @@
 # Throw this in a .bashrc or .bash_profile
 
+# Clean up merged branches
+alias gcmb="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
+
 #######################
 # Git branch Terminal #
 #######################
