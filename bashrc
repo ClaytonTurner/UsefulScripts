@@ -1,11 +1,12 @@
 # Throw this in a .bashrc or .bash_profile
 
+# Removes dangling images from docker
+alias cleandocker='docker rmi $(docker images -q --filter "dangling=true")'
+
 # Clean up merged branches
 alias gcmb="git branch --merged | grep -Ev '(^\*|master)' | xargs git branch -d"
 
-#######################
-# Git branch Terminal #
-#######################
+# Git CLI
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
