@@ -3,3 +3,4 @@
         name = Clayton Turner
 [alias]
         co = checkout
+	praise = blame
