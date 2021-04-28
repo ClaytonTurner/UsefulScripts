@@ -4,7 +4,7 @@
 alias cleandocker='docker rmi $(docker images -q --filter "dangling=true")'
 
 # Clean up merged branches
-alias gcmb="git branch --merged | grep -Ev '(^\*|master|main)' | xargs git branch -d"
+alias gcmb="git branch --merged | grep -Ev '(^\*|master|main|develop)' | xargs git branch -d"
 
 # Prune and Delete branches removed from remote
 alias gpd="git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
