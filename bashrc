@@ -1,5 +1,10 @@
 # Throw this in a .bashrc or .bash_profile
 
+####################
+# Django Shortcuts #
+####################
+alias djshowmigrations="./manage.py showmigrations | grep '\[ \]\|^[a-z]' | grep '[  ]' -B 1"
+
 # Removes dangling images from docker
 alias cleandocker='docker rmi $(docker images -q --filter "dangling=true")'
 
