@@ -8,6 +8,11 @@ alias djshowmigrations="./manage.py showmigrations | grep '\[ \]\|^[a-z]' | grep
 # Removes dangling images from docker
 alias cleandocker='docker rmi $(docker images -q --filter "dangling=true")'
 
+#################
+# Git Shortcuts #
+#################
+alias gs="git status"
+
 # Clean up merged branches
 alias gcmb="git branch --merged | grep -Ev '(^\*|master|main|develop)' | xargs git branch -d"
 
