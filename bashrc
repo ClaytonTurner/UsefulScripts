@@ -5,8 +5,13 @@
 ####################
 alias djshowmigrations="./manage.py showmigrations | grep '\[ \]\|^[a-z]' | grep '[  ]' -B 1"
 
+##########
+# Docker #
+##########
 # Removes dangling images from docker
 alias cleandocker='docker rmi $(docker images -q --filter "dangling=true")'
+# Purge docker images
+alias docker-nuke='docker stop $(docker ps -a -q) && docker rm -f $(docker ps -a -q) && docker image rm -f $(docker image ls -a -q) && docker volume rm -f $(docker volume ls -q)'
 
 #################
 # Git Shortcuts #
