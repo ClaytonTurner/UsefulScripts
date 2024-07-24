@@ -13,6 +13,17 @@ alias cleandocker='docker rmi $(docker images -q --filter "dangling=true")'
 # Purge docker images
 alias docker-nuke='docker stop $(docker ps -a -q) && docker rm -f $(docker ps -a -q) && docker image rm -f $(docker image ls -a -q) && docker volume rm -f $(docker volume ls -q)'
 
+##############
+# Java/Maven #
+##############
+alias mvnbuild="mvn clean package -X"
+alias mvninstall="mvn validate jar:jar install:install"
+
+##########
+# Python #
+##########
+alias pyreq="/usr/bin/python3 -m pip install -r requirements.txt"
+
 #################
 # Git Shortcuts #
 #################
