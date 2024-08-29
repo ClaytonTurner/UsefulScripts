@@ -24,6 +24,12 @@ alias mvninstall="mvn validate jar:jar install:install"
 ##########
 alias pyreq="/usr/bin/python3 -m pip install -r requirements.txt"
 
+##############
+# Monitoring #
+##############
+# Monitor network traffic on default DD port
+alias ddnc='nc -ulk -vv 8125'
+
 #################
 # Git Shortcuts #
 #################
